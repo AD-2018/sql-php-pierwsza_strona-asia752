@@ -1,4 +1,4 @@
 <?php
-echo("Witaj świecie");
+echo("Witaj swiecie");
 echo("Jestem Joanna Stanik");
 ?>
