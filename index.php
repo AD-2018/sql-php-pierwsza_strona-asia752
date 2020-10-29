@@ -1,5 +1,4 @@
 <?php
-echo("Witaj swiecie");
-echo("<br>");
+echo("<h3>Witaj swiecie</h3><br>");
 echo("Jestem Joanna Stanik");
 ?>
