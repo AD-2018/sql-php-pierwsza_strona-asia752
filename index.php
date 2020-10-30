@@ -1,7 +1,7 @@
 <?php
 $servername ="mysql-joannastanik.alwaysdata.net";
 $username ="217138";
-$password ="07052002As!a";
+$password ="blkn7!J";
 $dbname ="joannastanik_bazadanych";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
