@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css">
     <div="nav">
       <a href="index.php">menu</a>
-      <a href="orgPracownicy.php">orgPracownicy</a>
+      <a href="orgPracownicy.php">funcAgregujace</a>
   </div> 
 </head>
 <body>
