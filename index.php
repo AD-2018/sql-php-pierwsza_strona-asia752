@@ -92,6 +92,23 @@ echo('<table border="1">');
         echo('</tr>');
     }
   
+    echo ("<br>Zad.5<br>");
+$sql = "SELECT nazwa_dzial, avg(zarobki) as srednia FROM pracownicy, organizacja WHERE id_org=dzial group by dzial";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>dzial</th><th>srednia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['srednia'].'</td>');
+        echo('</tr>');
+    }
 
 
 
