@@ -13,7 +13,7 @@ echo ($sql);
     if ( $result) {
         echo "ok";
     } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
   
 
