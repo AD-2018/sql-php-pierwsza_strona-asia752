@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
 <?php
 require_once("lib.php");
 echo ("Zad.1");
