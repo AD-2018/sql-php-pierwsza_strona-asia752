@@ -91,6 +91,7 @@ echo('<table border="1">');
         echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['zarobki'].'</td>');
         echo('</tr>');
     }
+  echo('</table>');
   
     echo ("<br>Zad.5<br>");
 $sql = "SELECT nazwa_dzial, avg(zarobki) as srednia FROM pracownicy, organizacja WHERE id_org=dzial group by dzial";
@@ -109,6 +110,7 @@ echo('<table border="1">');
         echo('<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['srednia'].'</td>');
         echo('</tr>');
     }
+  echo('</table>');
 
 
 
