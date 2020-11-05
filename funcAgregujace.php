@@ -1,3 +1,5 @@
+<?php
+require_once("lib.php");
 echo ("<br>Zad.1<br>");
 $sql = "SELECT * FROM pracownicy";
 echo ("<li>".$sql);
@@ -101,3 +103,4 @@ echo('<table border="1">');
         echo('</tr>');
     }
   echo('</table>');
+?>
