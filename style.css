@@ -1,7 +1,8 @@
 body {
-  background-color: coral;
+  background-color: purple;
 }
 
 table {
   border-collapse: collapse;
+  overflow-x:auto
 }
