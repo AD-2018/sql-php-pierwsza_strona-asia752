@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
 <?php
 require_once("lib.php");
 $sql = "SELECT * FROM pracownicy";
@@ -15,3 +21,5 @@ echo('<table border="1">');
     echo('</table>');
 
 ?>
+</body>
+</html>
