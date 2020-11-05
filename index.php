@@ -6,8 +6,16 @@
 <body>
 <?php
 require_once("lib.php");
+echo ("Zad.1");
 $sql = "SELECT * FROM pracownicy";
-$result = mysqli_query($conn, $sql);
+echo ($sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result === TRUE) {
+        echo "ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+  
 
 echo('<table border="1">');
     echo('<th>Imie</th><th>zarobki</th>');
