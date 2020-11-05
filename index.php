@@ -7,7 +7,7 @@
   <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
 <?php
 require_once("lib.php");
-echo ("Zad.1");
+echo ("<br>Zad.1<br>");
 $sql = "SELECT * FROM pracownicy";
 echo ($sql);
   $result = mysqli_query($conn, $sql);
