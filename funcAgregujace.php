@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 require_once("lib.php");
 echo ("<br>Zad.1<br>");
@@ -104,3 +110,5 @@ echo('<table border="1">');
     }
   echo('</table>');
 ?>
+</body>
+</html>
