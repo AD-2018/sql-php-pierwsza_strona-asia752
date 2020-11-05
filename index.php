@@ -10,7 +10,7 @@ echo ("Zad.1");
 $sql = "SELECT * FROM pracownicy";
 echo ($sql);
   $result = mysqli_query($conn, $sql);
-    if ( $result === TRUE) {
+    if ( $result) {
         echo "ok";
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
