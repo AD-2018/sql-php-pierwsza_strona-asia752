@@ -2,11 +2,12 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
-    <div="nav">
-      <a href="index.php">menu</a>
-      <a href="funcAgregujace.php">funcAgregujace</a>
-  </div> 
+  <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
+  <div="nav">
+    <a href="index.php">Strona Główna</a>
+    <a href="orgPracownicy.php">Pracownicy</a>
+  </div>  
+  <h1>Joanna Stanik nr 12</h1>
 </head>
 <body>
 <?php
