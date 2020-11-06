@@ -14,7 +14,7 @@
 require_once("lib.php");
  
 echo ("<br>Zad.2<br>");
-$sql = "SELECT * FROM pracownicy WHERE dzial=2 and dzial=3";
+$sql = "SELECT * FROM pracownicy WHERE dzial=2 or dzial=3";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
