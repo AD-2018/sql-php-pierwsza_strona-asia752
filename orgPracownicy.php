@@ -5,7 +5,7 @@
   <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
   <div="nav">
     <a href="index.php">Strona Główna</a>
-    <a href="orgPracownicy.php">Pracownicy</a>
+    <a href="funcAgregujace.php">Funkcje Agregujące</a>
   </div>  
   <h1>Joanna Stanik nr 12</h1>
 </head>
