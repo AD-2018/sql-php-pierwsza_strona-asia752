@@ -55,7 +55,7 @@ echo('<table border="1">');
     }
   echo('</table>');
   
-    echo ("<br>Zad.1<br>");
+    echo ("<br>Zad.3<br>");
 $sql = "SELECT * FROM pracownicy WHERE zarobki<30";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
