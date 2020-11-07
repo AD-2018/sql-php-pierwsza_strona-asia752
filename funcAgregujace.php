@@ -165,11 +165,11 @@ echo ("<li>".$sql);
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Średnia</th>');
+    echo('<th>Ilość</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['srednia'].'</td>');
+        echo('<td>'.$row['ilosc'].'</td>');
         echo('</tr>');
     }
   echo('</table>');
