@@ -295,7 +295,7 @@ echo('<table border="1">');
   echo('</table>');
 
      echo ("<br>Zad.2<br>");
-$sql = "SELECT nazwa_dzial, avg(zarobki) as srednia from pracownicy, organizacja where id_org=dzial and imie not lika '%a' having avg(zarobki)<30 group by dzial";
+$sql = "SELECT nazwa_dzial, avg(zarobki) as srednia from pracownicy, organizacja where id_org=dzial and imie not lika '%a' group by dzial having avg(zarobki)<30";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
@@ -314,7 +314,7 @@ echo('<table border="1">');
   echo('</table>');
   
      echo ("<br>Zad.3<br>");
-$sql = "SELECT nazwa_dzial, count(imie) as ilosc from pracownicy, organizacja where id_org=dzial having count(imie)>3 group by dzial";
+$sql = "SELECT nazwa_dzial, count(imie) as ilosc from pracownicy, organizacja where id_org=dzial group by dzial having count(imie)>3";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
