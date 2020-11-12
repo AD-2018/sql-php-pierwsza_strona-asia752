@@ -176,7 +176,7 @@ echo('<table border="1">');
   
 echo("<h2>Group by</h2>");
   
-  echo ("<br>Zad.9<br>");
+  echo ("<br>Zad.1<br>");
 $sql = "SELECT nazwa_dzial, sum(zarobki) as suma from pracownicy, organizacja where id_org=dzial group by dzial";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
@@ -195,7 +195,7 @@ echo('<table border="1">');
     }
   echo('</table>');
   
- echo ("<br>Zad.10<br>");
+ echo ("<br>Zad.2<br>");
 $sql = "SELECT nazwa_dzial, count(imie) as ilosc from pracownicy, organizacja where id_org=dzial group by dzial";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
@@ -214,7 +214,7 @@ echo('<table border="1">');
     }
   echo('</table>');
   
-  echo ("<br>Zad.11<br>");
+  echo ("<br>Zad.3<br>");
 $sql = "SELECT nazwa_dzial, avg(zarobki) as srednia from pracownicy, organizacja where id_org=dzial group by dzial";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
