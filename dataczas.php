@@ -31,7 +31,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>'.'<td>'.$row['wiek'].'</td>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['data_urodzenia'].'</td><td>'.$row['wiek'].'</td>');
         echo('</tr>');
     }
 
@@ -147,7 +147,29 @@ echo('<table border="1">');
 
 echo('</table>');
   
+echo("<br>Zad 7<br>");
+$sql = "select avg(YEAR(CURDATE())-YEAR(data_urodzenia)) as sredniaLat from pracownicy, organizacja where id_org=dzial group by dzial";
+echo($sql);
 
-  ?>
-  </body>
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Dział</th><th>Średnia Lat</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['sredniaLat'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
+  
+
+?>
+</body>
 </html>
