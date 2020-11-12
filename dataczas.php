@@ -302,6 +302,30 @@ echo('<table border="1">');
     }
 
 echo('</table>');
+  
+echo("<h2>Formatowanie dat</h2>");
+ 
+echo("<br>Zad 1<br>");
+$sql = "select imie, date_format(data_urodzenia, '%W-%m-%Y') from pracownicy";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Imie</th><th>Data Urodzenia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
 ?>
 </body>
 </html>
