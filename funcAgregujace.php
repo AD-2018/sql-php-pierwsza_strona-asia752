@@ -276,7 +276,7 @@ echo('<table border="1">');
   echo("<h2>Having</h2>");
   
     echo ("<br>Zad.1<br>");
-$sql = "SELECT nazwa_dzial, avg(zarobki) as suma from pracownicy, organizacja where id_org=dzial having avg(zarobki)<28 group by dzial";
+$sql = "SELECT nazwa_dzial, avg(zarobki) as srednia from pracownicy, organizacja where id_org=dzial having avg(zarobki)<28 group by dzial";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
