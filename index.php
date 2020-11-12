@@ -5,12 +5,12 @@
 </head>
 <body>
   <nav class="nav">
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
+    <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
     <a class="link" href="index.php">Strona Główna</a>
     <a class="link" href="orgPracownicy.php">Pracownicy i organizacja</a>
     <a class="link" href="funcAgregujace.php">Funkcje Agregujące</a>
     <a class="link" href="dataczas.php">Data i czas</a>
-  </nav>  
+  </nav> 
   <h1>Joanna Stanik nr 12</h1>
 <?php
 require_once("lib.php");
