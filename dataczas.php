@@ -2,8 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
-  <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
   <nav class="nav">
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
     <a class="link" href="index.php">Strona Główna</a>
     <a class="link" href="orgPracownicy.php">Pracownicy i organizacja</a>
     <a class="link" href="funcAgregujace.php">Funkcje Agregujące</a>
