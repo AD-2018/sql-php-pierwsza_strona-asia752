@@ -37,27 +37,27 @@ echo('<table border="1">');
 
     echo('</table>');
   
-    echo ("<br>Zad.2<br>");
-$sql = "SELECT imie, data_urodzenia, year(curdate())-year(data_urodzenia) as wiek from pracownicy, organizacja where id_org=dzial and nazwa_dzial="serwis"";
-echo ("<li>".$sql);
-  $result = mysqli_query($conn, $sql);
-    if ( $result) {
+echo("<br>Zad 2 <br>");
+$sql = "select imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial from pracownicy, organizacja where id_org=dzial and nazwa_dzial='serwis'";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-  
 
 echo('<table border="1">');
-    echo('<th>imie</th><th>data urodzenia</th><th>wiek</th>');
+    echo('<th>Imie</th><th>Wiek</th><th>Dzial</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>'.'<td>'.$row['wiek'].'</td>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
-    echo('</table>');
+echo('</table>');
   
 
   ?>
