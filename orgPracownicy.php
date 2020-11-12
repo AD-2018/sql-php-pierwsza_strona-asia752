@@ -211,6 +211,30 @@ echo('<table border="1">');
     }
 
     echo('</table>');
+  
+  echo("<h2>Limit</h2>");
+  
+  echo ("<br>Zad.10<br>");
+$sql = "SELECT imie, nazwa_dzial, zarobki FROM pracownicy, organizacja WHERE id_org=dzial and dzial=4 order by zarobki desc limit 2";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+  
+
+echo('<table border="1">');
+    echo('<th>Imie</th><th>dzial</th><th>zarobki</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['zarobki'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
 ?>
 </body>
 </html>
