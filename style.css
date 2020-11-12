@@ -14,8 +14,10 @@ body {
 table, td {
   border-collapse: collapse;
   background-color: lightyellow;
+  text-align: center;
 }
 
 th {
   background-color: yellow;
+  text-align: center;
 }
