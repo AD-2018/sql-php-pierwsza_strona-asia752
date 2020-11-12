@@ -306,7 +306,7 @@ echo('</table>');
 echo("<h2>Formatowanie dat</h2>");
  
 echo("<br>Zad 1<br>");
-$sql = "select imie, date_format(data_urodzenia, '%W-%m-%Y') from pracownicy";
+$sql = "select imie, date_format(data_urodzenia, '%W-%m-%Y') as data from pracownicy";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -321,7 +321,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['data'].'</td>');
         echo('</tr>');
     }
 
