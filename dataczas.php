@@ -258,6 +258,50 @@ echo('<table border="1">');
     }
 
 echo('</table>');
+  
+echo("<br>Zad 12<br>");
+$sql = "select imie, datediff(curdate(),data_urodzenia) as dni_zycia from pracownicy";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Imie</th><th>Dni życia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['dni_zycia'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
+  
+echo("<br>Zad 13<br>");
+$sql = "select imie, data_urodzenia from pracownicy where imie not like '%a' order by data_urodzenia asc limit 1";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Imie</th><th>Data Urodzenia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['data_urodzenia'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
 ?>
 </body>
 </html>
