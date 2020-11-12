@@ -259,7 +259,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo ("<br>Zad.3<br>");
-$sql = "SELECT imie, nazwa_dzial, data_urodzenia FROM pracownicy, organizacja WHERE id_org=dzial order by data_urodzenia desc limit 1";
+$sql = "SELECT imie, nazwa_dzial, data_urodzenia FROM pracownicy, organizacja WHERE id_org=dzial order by data_urodzenia asc limit 1";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
