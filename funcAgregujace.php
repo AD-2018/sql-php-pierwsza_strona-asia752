@@ -6,6 +6,7 @@
   <div="nav">
     <a href="index.php">Strona Główna</a>
     <a href="orgPracownicy.php">Pracownicy</a>
+    <a href="dataiczas.php">Data i czas</a>
   </div>  
   <h1>Joanna Stanik nr 12</h1> 
 </head>
