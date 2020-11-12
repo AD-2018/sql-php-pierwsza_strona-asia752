@@ -14,3 +14,7 @@ body {
 table {
   border-collapse: collapse;
 }
+
+th {
+  background-color: yellow;
+}
