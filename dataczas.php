@@ -104,7 +104,7 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 5<br>");
-$sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as sumaLat from pracownicy and imie like '%a'";
+$sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as sumaLat from pracownicy where imie like '%a'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -126,7 +126,7 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 6<br>");
-$sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as sumaLat from pracownicy and imie not like '%a'";
+$sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as sumaLat from pracownicy where imie not like '%a'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
