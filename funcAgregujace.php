@@ -272,6 +272,27 @@ echo('<table border="1">');
         echo('</tr>');
     }
   echo('</table>');
+  
+  echo("<h2>Having</h2>");
+  
+    echo ("<br>Zad.1<br>");
+$sql = "SELECT sum(zarobki) as suma from pracownicy, organizacja where id_org=dzial having sum(zarobki)<28 group by dzial";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Dział</th><th>Suma</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['suma'].'</td>');
+        echo('</tr>');
+    }
+  echo('</table>');
 
 ?>
 </body>
