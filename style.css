@@ -2,6 +2,12 @@ body {
   background-color: MediumPurple;
 }
 
+.link {
+  background-color: yellow;
+  padding: 1rem;
+  margin-left: 2px;
+}
+
 table {
   border-collapse: collapse;
 }
