@@ -8,7 +8,7 @@
     <a href="orgPracownicy.php">Pracownicy i organizacja</a>
     <a href="funcAgregujace.php">Funkcje Agregujące</a>
     <a href="dataczas.php">Data i czas</a>
-  </nav>  
+  </nav>   
   <h1>Joanna Stanik nr 12</h1> 
 </head>
 <body>
