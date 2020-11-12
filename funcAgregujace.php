@@ -295,7 +295,7 @@ echo('<table border="1">');
   echo('</table>');
 
      echo ("<br>Zad.2<br>");
-$sql = "SELECT nazwa_dzial, avg(zarobki) as suma from pracownicy, organizacja where id_org=dzial and imie not lika '%a' having avg(zarobki)<30 group by dzial";
+$sql = "SELECT nazwa_dzial, avg(zarobki) as srednia from pracownicy, organizacja where id_org=dzial and imie not lika '%a' having avg(zarobki)<30 group by dzial";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
@@ -309,6 +309,25 @@ echo('<table border="1">');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['srednia'].'</td>');
+        echo('</tr>');
+    }
+  echo('</table>');
+  
+     echo ("<br>Zad.3<br>");
+$sql = "SELECT nazwa_dzial, count(imie) as ilosc from pracownicy, organizacja where id_org=dzial having count(imie)>3 group by dzial";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Dział</th><th>Ilość</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['nazwa_dzial'].'</td>'.'<td>'.$row['ilosc'].'</td>');
         echo('</tr>');
     }
   echo('</table>');
