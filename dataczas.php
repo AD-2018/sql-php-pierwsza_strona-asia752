@@ -440,7 +440,7 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 7<br>");
-$sql = "select date_format('2002-05-07', '%j') as DzienRoku;
+$sql = "select date_format('2002-05-07', '%j') as DzienRoku";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
