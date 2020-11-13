@@ -493,7 +493,7 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 9<br>");
-$sql = "SELECT count(date_format(data_urodzenia, '%W')) as Liczba pracowników from pracownicy where date_format(data_urodzenia, '%W')='Poniedziałek'";
+$sql = "SELECT count(date_format(data_urodzenia, '%W')) as Liczba from pracownicy where date_format(data_urodzenia, '%W')='Poniedziałek'";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
