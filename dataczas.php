@@ -329,7 +329,7 @@ echo('</table>');
   
 echo("<br>Zad 2<br>");
 $sql = "SET lc_time_names = 'pl_PL'
-SELECT DATE_FORMAT(CURDATE() as data, '%W')";
+SELECT DATE_FORMAT(CURDATE(), '%W') as data";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -340,13 +340,13 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Data</th>');
+echo('<th>Data</th>');
 
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['data'].'</td>');
-        echo('</tr>');
-    }
+   while($row=mysqli_fetch_assoc($result)){
+       echo('<tr>');
+       echo('<td>'.$row['data'].'</td>');
+       echo('</tr>');
+   }
 
 echo('</table>');
 ?>
