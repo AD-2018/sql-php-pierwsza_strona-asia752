@@ -515,7 +515,7 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 10<br>");
-$sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, count(date_format(data_urodzenia, '%W')) as Liczba FROM pracownicy GROUP BY dzien, ORDER BY CASE
+$sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, count(date_format(data_urodzenia, '%W')) as Liczba FROM pracownicy GROUP BY dzien ORDER BY CASE
           
           WHEN dzien = 'Poniedziałek' THEN 1
           WHEN dzien = 'Wtorek' THEN 2
