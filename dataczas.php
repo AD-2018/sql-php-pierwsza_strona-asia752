@@ -461,7 +461,7 @@ echo('<table border="1">');
 
 echo('</table>');
   
-echo("<br>Zad 6<br>");
+echo("<br>Zad 8<br>");
 $sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, imie, data_urodzenia FROM pracownicy ORDER BY CASE
           
           WHEN dzien = 'Poniedziałek' THEN 1
@@ -482,11 +482,33 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>Data Urodzenia</th><th></th>');
+    echo('<th>Imie</th><th>Data Urodzenia</th><th>Dzień</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['imie'].'</td><td>'.$row['data_urodzenia'].'</td><td>'.$row['dzien'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
+  
+echo("<br>Zad 9<br>");
+$sql = "SELECT count(date_format(data_urodzenia, '%W')) as Liczba pracowników from pracownicy where date_format(data_urodzenia, '%W')='Poniedziałek'";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Liczba</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['Liczba'].'</td>');
         echo('</tr>');
     }
 
