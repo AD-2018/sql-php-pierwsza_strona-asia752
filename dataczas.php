@@ -416,6 +416,28 @@ echo('<table border="1">');
     }
 
 echo('</table>');
+  
+echo("<br>Zad 6<br>");
+$sql = "select imie, datediff(curdate(),data_urodzenia)*24 as godziny, datediff(curdate(),data_urodzenia)*24*60 as minuty from pracownicy";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Imie</th><th>Data Urodzenia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td><td>'.$row['godziny'].'</td><td>'.$row['minuty'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
 ?>
 </body>
 </html>
