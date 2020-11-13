@@ -515,13 +515,12 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 10<br>");
-$sql = "SELECT count(date_format(data_urodzenia, '%W')) as Liczba FROM pracownicy where date_format(data_urodzenia, '%W')='Poniedziałek'
-ORDER BY CASE
+$sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, count(date_format(data_urodzenia, '%W')) as Liczba FROM pracownicy where ORDER BY CASE
           
           WHEN dzien = 'Poniedziałek' THEN 1
           WHEN dzien = 'Wtorek' THEN 2
           WHEN dzien = 'Środa' THEN 3
-          WHEN dzien= 'Czwartek' THEN 4
+          WHEN dzien = 'Czwartek' THEN 4
           WHEN dzien = 'Piątek' THEN 5
           WHEN dzien = 'Sobota' THEN 6
           WHEN dzien = 'Niedziela' THEN 7
