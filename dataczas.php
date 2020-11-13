@@ -350,7 +350,7 @@ echo('<th>Data</th>');
 
 echo('</table>');
   
-echo("<br>Zad 2<br>");
+echo("<br>Zad 3<br>");
 $sql = "select imie, date_format(data_urodzenia, '%W-%M-%Y') as data from pracownicy";
 echo($sql);
 
@@ -367,6 +367,28 @@ echo('<table border="1">');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['imie'].'</td><td>'.$row['data'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
+  
+echo("<br>Zad 4<br>");
+$sql = "select curtime(4)";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Data</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['curdate'].'</td>');
         echo('</tr>');
     }
 
