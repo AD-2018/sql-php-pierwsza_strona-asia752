@@ -524,7 +524,7 @@ $sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, count(date_format(data
           WHEN dzien = 'Piątek' THEN 5
           WHEN dzien = 'Sobota' THEN 6
           WHEN dzien = 'Niedziela' THEN 7
-          END ASC group by dzien";
+          group by dzien END ASC";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
