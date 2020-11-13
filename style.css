@@ -14,12 +14,11 @@ body {
 table, td {
   border-collapse: collapse;
   background-color: lightyellow;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
 }
 
 th {
   background-color: yellow;
-  padding: 15px;
   text-align: center;
 }
