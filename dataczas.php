@@ -373,7 +373,7 @@ echo('<table border="1">');
 echo('</table>');
   
 echo("<br>Zad 4<br>");
-$sql = "select curtime(4)";
+$sql = "select curtime(4) as data";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -388,7 +388,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['curdate'].'</td>');
+        echo('<td>'.$row['data'].'</td>');
         echo('</tr>');
     }
 
