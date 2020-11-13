@@ -5,7 +5,7 @@ body {
   background-color: yellow;
   padding: 1rem;
   margin-left: 10px;
-  margin-top: 10px;
+  padding: 10px;
 }
 .link:hover {
   background-color: red;
@@ -14,10 +14,12 @@ body {
 table, td {
   border-collapse: collapse;
   background-color: lightyellow;
+  padding: 15px;
   text-align: center;
 }
 
 th {
   background-color: yellow;
+  padding: 15px;
   text-align: center;
 }
