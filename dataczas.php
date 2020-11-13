@@ -329,7 +329,7 @@ echo('</table>');
   
 echo("<br>Zad 2<br>");
 $sql = "SET lc_time_names = 'pl_PL';
-SELECT DATE_FORMAT(CURDATE(), '%W')";
+SELECT DATE_FORMAT(CURDATE(), '%W') as data";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
