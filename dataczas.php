@@ -332,7 +332,8 @@ $sql1 = "SET lc_time_names = 'pl_PL'";
 $sql2 ="SELECT DATE_FORMAT(CURDATE(), '%W')as data";
 echo($sql);
 
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql1);
+$result = mysqli_query($conn, $sql2);
 if ( $result) {
         echo "<li>ok";
     } else {
