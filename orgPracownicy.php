@@ -171,7 +171,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo ("<br>Zad.4<br>");
-$sql = "SELECT imie, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and imie like '%a' and (dzial=1 or dzial=3) order by zarobki asc";
+$sql = "SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and imie like '%a' and (dzial=1 or dzial=3) order by zarobki asc";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
@@ -193,7 +193,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo ("<br>Zad.5<br>");
-$sql = "SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial and imie NOT LIKE '%a' order by  nazwa_dzial asc, zarobki asc";
+$sql = "SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial and imie NOT LIKE '%a' order by  nazwa_dzial asc, zarobki asc";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
