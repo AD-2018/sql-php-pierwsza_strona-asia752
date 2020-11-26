@@ -39,7 +39,17 @@ echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_pracownicy'].'</td>'.'<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td>'.'<td>'.$row['dzial'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>');
+        echo('<td>'.$row['id_pracownicy'].'</td>'.'<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td>'.'<td>'.$row['dzial'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>'.
+	     
+	     '<td>
+	    
+	     <form action="delete.php" method="POST">
+  		<input type="number" name="id" value="3"></br>
+   		<input type="submit" value="Zapisz w zmiennej dolar_POST">
+	</form>
+	     
+	     </td>');
+	    
         echo('</tr>');
     }
   echo('</table>');
