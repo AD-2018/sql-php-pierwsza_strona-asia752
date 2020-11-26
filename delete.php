@@ -18,7 +18,7 @@ $sql = "DELETE FROM pracownicy WHERE id_pracownicy=".$_POST['id'];
 echo $sql;
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo "Record deleted successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
