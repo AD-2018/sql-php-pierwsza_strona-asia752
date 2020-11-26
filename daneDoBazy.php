@@ -10,9 +10,9 @@
 
 	<h3>dodawanie pracownika</h3>
 	<form action="insert.php" method="POST">
-		<label>"Imie"</label><input type="text" name="imie"></br>
-		<label>"Dzial"</label><input type="number" name="dzial"></br>
-		<label>"zarobki"</label><input type="number" name="zarobki"></br>
+		<label>Imie</label><input type="text" name="imie"></br>
+		<label>Dzial</label><input type="number" name="dzial"></br>
+		<label>zarobki</label><input type="number" name="zarobki"></br>
 		<input type="date" name="data_urodzenia"></br>
 		<input type="submit" value="dodaj pracownika">
 	</form>
