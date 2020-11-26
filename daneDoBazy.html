@@ -6,6 +6,8 @@
   <title>Dane do Bazy</title>
 </head>
 <body>
+
+	<h3>dodawanie pracownika</h3>
 	<form action="insert.php" method="POST">
 	    	<input type="text" name="imie"></br>
 		<input type="number" name="dzial"></br>
@@ -13,5 +15,10 @@
 		<input type="date" name="data_urodzenia"></br>
 		<input type="submit" value="dodaj pracownika">
 	</form>
+<h3>usuwanie pracownika</h3>
+	<form action="delete.php" method="POST">
+  		<input type="number" name="id"></br>
+   		<input type="submit" value="Zapisz w zmiennej $_POST['id_prawownicy']">
+</form>
 </body>
 </html>
