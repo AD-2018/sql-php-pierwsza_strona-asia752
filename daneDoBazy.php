@@ -42,5 +42,6 @@ echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</
         echo('</tr>');
     }
   echo('</table>');
+?>
 </body>
 </html>
