@@ -22,3 +22,7 @@ th {
   background-color: yellow;
   text-align: center;
 }
+
+label {
+  margin: 1rem;
+}
