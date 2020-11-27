@@ -44,7 +44,7 @@ echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</
 	     '<td>
 	    
 	     <form action="delete.php" method="POST">
-  		<input type="number" name="id" value="$_POST['id_pracownicy']"></br>
+  		<input type="number" name="id" value="3"></br>
    		<input type="submit" value="Zapisz w zmiennej dolar_POST">
 	</form>
 	     
