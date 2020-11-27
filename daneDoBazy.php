@@ -35,7 +35,7 @@ echo ("<li>".$sql);
   
 
 echo('<table border="1">');
-echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</th>');
+echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</th><th>Usuwanie</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
