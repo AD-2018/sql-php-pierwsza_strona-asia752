@@ -16,11 +16,11 @@
 		<input type="date" name="data_urodzenia"></br>
 		<input type="submit" value="dodaj pracownika">
 	</form>
-<h3>usuwanie pracownika</h3>
+	<h3>usuwanie pracownika</h3>
 	<form action="delete.php" method="POST">
   		<input type="number" name="id"></br>
    		<input type="submit" value="Zapisz w zmiennej $_POST['id_prawownicy']">
-</form>
+	</form>
 <?php
 require_once("lib.php");
  echo ("<br>Zad.1<br>");
@@ -44,7 +44,7 @@ echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</
 	     '<td>
 	    
 	     <form action="delete.php" method="POST">
-  		<input type="number" name="id" value=".$row['id_pracownicy']"></br>
+  		<input type="number" name="id" value="3"></br>
    		<input type="submit" value="Zapisz w zmiennej dolar_POST">
 	</form>
 	     
