@@ -13,7 +13,7 @@
 		<label>Imie</label><input type="text" name="imie"></br>
 		<label>Dzial</label><input type="number" name="dzial"></br>
 		<label>zarobki</label><input type="number" name="zarobki"></br>
-		<input type="date" name="data_urodzenia"></br>
+		<label>Data urodzenia</label><input type="date" name="data_urodzenia"></br>
 		<input type="submit" value="dodaj pracownika">
 	</form>
 	<h3>usuwanie pracownika</h3>
