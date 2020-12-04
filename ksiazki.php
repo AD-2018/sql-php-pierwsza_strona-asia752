@@ -37,6 +37,50 @@ echo('<table border="1">');
     }
 
     echo('</table>');
+  
+  echo ("<br>Zad.1<br>");
+$sql = "SELECT * FROM bibl_autor";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+  
+
+echo('<table border="2">');
+    echo('<th>Id</th><th>Tytuł</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+  
+  echo ("<br>Zad.3<br>");
+$sql = "SELECT * FROM bibl_autor";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+  
+
+echo('<table border="1">');
+    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th><wypoz</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_book'].'</td><td>'.$row['id_autor'].'</td><td>'.$row['id_tytul'].'</td><td>'.$row['wypoz'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
     ?>
     </body>
     </html>
