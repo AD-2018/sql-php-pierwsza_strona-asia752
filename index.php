@@ -12,6 +12,7 @@
     <a class="link" href="dataczas.php">Data i czas</a>
     <a class="link" href="formularz.html">Formularz</a>
     <a class="link" href="daneDoBazy.php">Dane do bazy</a>
+    <a class="link" href="ksiazki.php">Książki</a>
   </nav> 
   <h1>Joanna Stanik nr 12</h1>
 <?php
