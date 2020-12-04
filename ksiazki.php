@@ -72,7 +72,7 @@ echo ("<li>".$sql);
   
 
 echo('<table border="1">');
-    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th><wypoz</th>');
+    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th><th>wypoz</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
