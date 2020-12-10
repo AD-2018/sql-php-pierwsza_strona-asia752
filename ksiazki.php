@@ -35,6 +35,7 @@ echo('<select name="Autor">');
         echo"</option>"; 
     }
 echo('</select>');
+  echo("<br>");
   
   echo ("<br>Tytuły<br>");
 $sql = "SELECT * FROM bibl_tytul";
@@ -47,16 +48,15 @@ echo ("<li>".$sql);
     }
   
 
-echo('<table border="2">');
-    echo('<th>Id</th><th>Tytuł</th>');
+echo('<select name="Tytuł">');
 
     while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
-        echo('</tr>');
+        echo'<option value="'.$row['id_tytul'].'">';
+        echo($row['tytul']);
+        echo"</option>"; 
     }
-
-    echo('</table>');
+echo('</select>');
+  echo("<br>");
   
   echo ("<br>Książki<br>");
 $sql = "SELECT id_book, autor, tytul FROM bibl_book, bibl_tytul, bibl_autor WHERE bibl_tytul.id_tytul = bibl_book.id_tytul AND bibl_autor.id_autor = bibl_book.id_autor order by id_book asc";
