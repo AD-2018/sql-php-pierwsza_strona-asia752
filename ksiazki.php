@@ -61,7 +61,7 @@ echo('<table border="2">');
     echo('</table>');
   
   echo ("<br>Książki<br>");
-$sql = "SELECT id_book, autor, tytul FROM bibl_book, bibl_tytul, bibl_autor WHERE bibl_tytul.id_tytul = bibl_book.id_tytul AND bibl_autor.id_autor = bibl_book.id_autor";
+$sql = "SELECT id_book, autor, tytul FROM bibl_book, bibl_tytul, bibl_autor WHERE bibl_tytul.id_tytul = bibl_book.id_tytul AND bibl_autor.id_autor = bibl_book.id_autor order by id_book asc";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
