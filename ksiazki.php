@@ -16,6 +16,11 @@
 <?php
 require_once("lib.php");
   
+echo("<h1>Autorzy</h1>"
+echo("<select id="autor">");
+     echo("<option value="autor">Henryk Sienkiewicz</option>");
+echo("</select>");
+  
 echo ("<br>Autorzy<br>");
 $sql = "SELECT * FROM bibl_autor";
 echo ("<li>".$sql);
