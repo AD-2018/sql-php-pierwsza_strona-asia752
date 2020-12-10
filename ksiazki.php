@@ -16,32 +16,14 @@
 <?php
 require_once("lib.php");
   
-echo("<h1>Autorzy</h1>"
-echo("<select id="autor">");
-     echo("<option value="autor">Henryk Sienkiewicz</option>");
-echo("</select>");
-  
-echo ("<br>Autorzy<br>");
-$sql = "SELECT * FROM bibl_autor";
-echo ("<li>".$sql);
-  $result = mysqli_query($conn, $sql);
-    if ( $result) {
-        echo "<li>ok";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-  
+echo("<br>Autorzy<br>");
+echo('<label for="bibl_autor">Wybierz autora:</label>');
 
-echo('<table border="1">');
-    echo('<th>Id</th><th>Autor</th>');
+echo('<select id="bibl_autor">');
+echo('<option value="id_autor"></option>');
+echo('<option value="autor"></option>');
+echo('</select>');
 
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
-        echo('</tr>');
-    }
-
-    echo('</table>');
   
   echo ("<br>Tytuły<br>");
 $sql = "SELECT * FROM bibl_tytul";
