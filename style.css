@@ -30,7 +30,6 @@ label {
 .container {
   display: flex;
   flex-wrap: wrap;
-  background-color: lightyellow;
   width:100%;
   margin: 10px;
 }
@@ -56,5 +55,3 @@ label {
   margin: 10px;
   width:80%
 }
-
-
