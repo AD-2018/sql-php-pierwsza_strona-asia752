@@ -7,6 +7,23 @@
   <title>Dane do Bazy</title>
 </head>
 <body>
+	  <div class="container">
+    <div class="tytul">
+      <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
+      <div class="imie">
+      <h1>Joanna Stanik nr 12</h1>
+    </div>
+  </div>  
+  <div class="menu">
+    <a class="link" href="index.php">Strona Główna</a>
+    <a class="link" href="orgPracownicy.php">Pracownicy i organizacja</a>
+    <a class="link" href="funcAgregujace.php">Funkcje Agregujące</a>
+    <a class="link" href="dataczas.php">Data i czas</a>
+    <a class="link" href="formularz.html">Formularz</a>
+    <a class="link" href="daneDoBazy.php">Dane do bazy</a>
+    <a class="link" href="ksiazki.php">Książki</a>
+  </div> 
+  <div class="strona">
 
 	<h3>dodawanie pracownika</h3>
 	<form action="insert.php" method="POST">
@@ -54,5 +71,6 @@ echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</
     }
   echo('</table>');
 ?>
+</div>
 </body>
 </html>
