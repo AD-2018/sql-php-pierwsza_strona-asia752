@@ -22,7 +22,7 @@
   </div> 
   <div class="strona">
 <?php
-require_once("/lib.php");
+require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-asia752/lib.php");
   
   echo ("<br>Autorzy<br>");
 $sql = "SELECT * FROM bibl_autor";

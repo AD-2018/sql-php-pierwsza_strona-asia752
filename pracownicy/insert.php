@@ -5,7 +5,7 @@ echo "<li>".$_POST['dzial'];
 echo "<li>".$_POST['zarobki'];
 echo "<li>".$_POST['data_urodzenia'];
 
-require_once("lib.php");
+require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-asia752/lib.php");
 
 $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
        VALUES (null, '".$_POST['imie']."', '".$_POST['dzial']."','".$_POST['zarobki']."','".$_POST['data_urodzenia']."')";
