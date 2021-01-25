@@ -12,7 +12,7 @@
     </div>
   </div>  
   <div class="menu">
-  <a class="link" href="index.php">Strona Główna</a>
+  <a class="link" href="/index.php">Strona Główna</a>
     <a class="link" href="/pracownicy/orgPracownicy.php">Pracownicy i organizacja</a>
     <a class="link" href="/pracownicy/funcAgregujace.php">Funkcje Agregujące</a>
     <a class="link" href="/pracownicy/dataczas.php">Data i czas</a>
