@@ -39,7 +39,7 @@
    		<input type="submit" value="usuń pracownika">
 	</form>
 <?php
-require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-asia752/lib.php");
+require_once("../lib.php");
  echo ("<br>Zad.1<br>");
 $sql = "SELECT * FROM pracownicy";
 echo ("<li>".$sql);

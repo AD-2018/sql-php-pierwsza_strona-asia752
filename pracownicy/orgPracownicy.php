@@ -22,7 +22,7 @@
   </div> 
   <div class="strona">
 <?php
-require_once("https://github.com/AD-2018/sql-php-pierwsza_strona-asia752/lib.php");
+require_once("../lib.php");
 echo ("<br>Zad.1<br>");
 $sql = "SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial";
 echo ("<li>".$sql);
