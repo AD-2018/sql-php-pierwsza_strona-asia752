@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
@@ -12,17 +12,17 @@
     </div>
   </div>  
   <div class="menu">
-  <a class="link" href="index.php">Strona Główna</a>
-    <a class="link" href="pracownicy/orgPracownicy.php">Pracownicy i organizacja</a>
-    <a class="link" href="pracownicy/funcAgregujace.php">Funkcje Agregujące</a>
-    <a class="link" href="pracownicy/dataczas.php">Data i czas</a>
-    <a class="link" href="pracownicy/formularz.html">Formularz</a>
-    <a class="link" href="pracownicy/daneDoBazy.php">Dane do bazy</a>
-    <a class="link" href="książki/ksiazki.php">Książki</a>
+  <a class="link" href="/index.php">Strona Główna</a>
+    <a class="link" href="/pracownicy/orgPracownicy.php">Pracownicy i organizacja</a>
+    <a class="link" href="/pracownicy/funcAgregujace.php">Funkcje Agregujące</a>
+    <a class="link" href="/pracownicy/dataczas.php">Data i czas</a>
+    <a class="link" href="/pracownicy/formularz.html">Formularz</a>
+    <a class="link" href="/pracownicy/daneDoBazy.php">Dane do bazy</a>
+    <a class="link" href="/książki/ksiazki.php">Książki</a>
   </div> 
   <div class="strona">
 <?php
-require_once("lib.php");
+require_once("/lib.php");
 echo ("<br>Zad.1<br>");
 $sql = "SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE id_org=dzial";
 echo ("<li>".$sql);

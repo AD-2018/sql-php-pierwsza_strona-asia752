@@ -12,17 +12,17 @@
     </div>
   </div>  
   <div class="menu">
-  <a class="link" href="index.php">Strona Główna</a>
-    <a class="link" href="pracownicy/orgPracownicy.php">Pracownicy i organizacja</a>
-    <a class="link" href="pracownicy/funcAgregujace.php">Funkcje Agregujące</a>
-    <a class="link" href="pracownicy/dataczas.php">Data i czas</a>
-    <a class="link" href="pracownicy/formularz.html">Formularz</a>
-    <a class="link" href="pracownicy/daneDoBazy.php">Dane do bazy</a>
-    <a class="link" href="książki/ksiazki.php">Książki</a>
+  <a class="link" href="/index.php">Strona Główna</a>
+    <a class="link" href="/pracownicy/orgPracownicy.php">Pracownicy i organizacja</a>
+    <a class="link" href="/pracownicy/funcAgregujace.php">Funkcje Agregujące</a>
+    <a class="link" href="/pracownicy/dataczas.php">Data i czas</a>
+    <a class="link" href="/pracownicy/formularz.html">Formularz</a>
+    <a class="link" href="/pracownicy/daneDoBazy.php">Dane do bazy</a>
+    <a class="link" href="/książki/ksiazki.php">Książki</a>
   </div> 
   <div class="strona">
 <?php
-require_once("lib.php");
+require_once("/lib.php");
   
   echo ("<br>Autorzy<br>");
 $sql = "SELECT * FROM bibl_autor";

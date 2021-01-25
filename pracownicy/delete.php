@@ -2,7 +2,7 @@
 echo("jestes w delete.php <br>");
 echo $_POST['id'];
 
-require_once("lib.php");
+require_once("/lib.php");
 
 $sql = "DELETE FROM pracownicy WHERE id_pracownicy=".$_POST['id'];
 
