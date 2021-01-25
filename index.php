@@ -22,7 +22,7 @@
   </div> 
   <div class="strona">
 <?php
-require_once("/lib.php");
+require_once("lib.php");
  
   echo ("<br>Zad.1<br>");
 $sql = "SELECT * FROM pracownicy WHERE dzial=2";
