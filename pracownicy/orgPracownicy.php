@@ -12,13 +12,13 @@
     </div>
   </div>  
   <div class="menu">
-    <a class="link" href="index.php">Strona Główna</a>
-    <a class="link" href="orgPracownicy.php">Pracownicy i organizacja</a>
-    <a class="link" href="funcAgregujace.php">Funkcje Agregujące</a>
-    <a class="link" href="dataczas.php">Data i czas</a>
-    <a class="link" href="formularz.html">Formularz</a>
-    <a class="link" href="daneDoBazy.php">Dane do bazy</a>
-    <a class="link" href="ksiazki.php">Książki</a>
+  <a class="link" href="index.php">Strona Główna</a>
+    <a class="link" href="pracownicy/orgPracownicy.php">Pracownicy i organizacja</a>
+    <a class="link" href="pracownicy/funcAgregujace.php">Funkcje Agregujące</a>
+    <a class="link" href="pracownicy/dataczas.php">Data i czas</a>
+    <a class="link" href="pracownicy/formularz.html">Formularz</a>
+    <a class="link" href="pracownicy/daneDoBazy.php">Dane do bazy</a>
+    <a class="link" href="książki/ksiazki.php">Książki</a>
   </div> 
   <div class="strona">
 <?php
