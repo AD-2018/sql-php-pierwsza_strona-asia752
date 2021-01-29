@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width">
-  <title>Dane do Bazy</title>
+  <title>Joanna Stanik</title>
 </head>
 <body>
 	  <div class="container">
@@ -21,7 +21,7 @@
     <a class="link" href="/pracownicy/dataczas.php">Data i czas</a>
     <a class="link" href="/pracownicy/formularz.html">Formularz</a>
     <a class="link" href="/pracownicy/daneDoBazy.php">Dane do bazy</a>
-    <a class="link" href="/książki/ksiazki.php">Książki</a>
+    <a class="link" href="/ksiazki/ksiazki.php">Książki</a>
   </div> 
   <div class="strona">
 
