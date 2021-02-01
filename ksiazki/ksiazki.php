@@ -22,6 +22,12 @@
     <a class="link" href="/ksiazki/ksiazki.php">Książki</a>
   </div> 
   <div class="strona">
+
+  <h3>dodawanie autora</h3>
+	<form action="/ksiazki/insertautor.php" method="POST">
+		<label>Autor</label><input type="text" name="autor"></br>
+		<input type="submit" value="dodaj autora">
+	</form>
 <?php
 require_once("../lib.php");
   
@@ -34,7 +40,7 @@ echo ("<li>".$sql);
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-  
+    
 
 echo('<select name="Autor">');
 
@@ -66,6 +72,49 @@ echo('<select name="Tytuł">');
     }
 echo('</select>');
   echo("<br>");
+
+  echo ("<br>Autorzy tabela<br>");
+  $sql = "SELECT * FROM bibl_autor";
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    echo('<table border="1">');
+    echo('<th>Id</th><th>Autor</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
+
+    echo ("<br>Tytuły tabela<br>");
+    $sql = "SELECT * FROM bibl_tytul";
+  echo ("<li>".$sql);
+    $result = mysqli_query($conn, $sql);
+      if ( $result) {
+          echo "<li>ok";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+  
+      echo('<table border="1">');
+      echo('<th>Id</th><th>Tytuł</th>');
+  
+      while($row=mysqli_fetch_assoc($result)){
+          echo('<tr>');
+          echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
+          echo('</tr>');
+      }
+  
+      echo('</table>');
+    
   
   echo ("<br>Książki<br>");
 $sql = "SELECT id_book, autor, tytul FROM bibl_book, bibl_tytul, bibl_autor WHERE bibl_tytul.id_tytul = bibl_book.id_tytul AND bibl_autor.id_autor = bibl_book.id_autor order by id_book asc";

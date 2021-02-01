@@ -12,7 +12,7 @@ $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodze
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
-  header('Location: https://stanikjoanna.herokuapp.com/daneDoBazy.php');
+  header('Location: https://stanikjoanna.herokuapp.com/pracownicy/daneDoBazy.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
