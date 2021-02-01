@@ -28,6 +28,12 @@
 		<label>Autor</label><input type="text" name="autor"></br>
 		<input type="submit" value="dodaj autora">
 	</form>
+
+  <h3>dodawanie tytułu</h3>
+	<form action="/ksiazki/inserttytul.php" method="POST">
+		<label>Tytul</label><input type="text" name="tytul"></br>
+		<input type="submit" value="dodaj tytul">
+	</form>
 <?php
 require_once("../lib.php");
   
@@ -40,7 +46,7 @@ echo ("<li>".$sql);
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-    
+
 
 echo('<select name="Autor">');
 
