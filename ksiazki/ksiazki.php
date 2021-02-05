@@ -3,10 +3,10 @@
 <head>
 <link rel="stylesheet" href="/style.css"> 
 <title>Joanna Stanik</title>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
 </head>
 <body>
     <div class="container">
@@ -33,11 +33,24 @@
 		<input type="submit" value="dodaj autora">
 	</form>
 
+  <h3>usuwanie autora</h3>
+	<form action="/ksiazki/deleteautor.php" method="POST">
+  		<input type="number" name="id"></br>
+   		<input type="submit" value="usuń autora">
+	</form>
+
   <h3>dodawanie tytułu</h3>
 	<form action="/ksiazki/inserttytul.php" method="POST">
 		<label>Tytul</label><input type="text" name="tytul"></br>
 		<input type="submit" value="dodaj tytul">
 	</form>
+
+  <h3>usuwanie tytułu</h3>
+<form action="/ksiazki/deletetytul.php" method="POST">
+    <input type="number" name="id"></br>
+     <input type="submit" value="usuń tytul">
+</form>
+
 <?php
 require_once("../lib.php");
   
@@ -125,7 +138,48 @@ echo ("<li>".$sql);
   
       echo('</table>');
     
-  
+      echo ("<br>Autorzy<br>");
+      $sql = "SELECT * FROM bibl_autor";
+      echo ("<li>".$sql);
+        $result = mysqli_query($conn, $sql);
+          if ( $result) {
+              echo "<li>ok";
+          } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          }
+        
+      
+      echo('<table border="1">');
+          echo('<th>Id</th><th>Autor</th>')
+          while($row=mysqli_fetch_assoc($result)){
+              echo('<tr>');
+              echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
+              echo('</tr>');
+          }
+      
+          echo('</table>');
+
+          echo ("<br>Tytuły<br>");
+          $sql = "SELECT * FROM bibl_tytul";
+          echo ("<li>".$sql);
+            $result = mysqli_query($conn, $sql);
+              if ( $result) {
+                  echo "<li>ok";
+              } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+              }
+            
+          
+          echo('<table border="1">');
+              echo('<th>Id</th><>Tytuł</>')
+              while($row=mysqli_fetch_assoc($result)){
+                  echo('<tr>');
+                  echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
+                  echo('</tr>');
+              }
+          
+              echo('</table>');
+
   echo ("<br>Książki<br>");
 $sql = "SELECT id_book, autor, tytul FROM bibl_book, bibl_tytul, bibl_autor WHERE bibl_tytul.id_tytul = bibl_book.id_tytul AND bibl_autor.id_autor = bibl_book.id_autor order by id_book asc";
 echo ("<li>".$sql);
