@@ -1,3 +1,33 @@
-body {
-    background-color: red;
+.menu {
+    background-color: aquamarine;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    background-color:burlywood;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.sidebar {
+    background-color: cadetblue;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.menu_item{
+    background-color: coral;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.footer {
+    background-color: cornflowerblue;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
 }
