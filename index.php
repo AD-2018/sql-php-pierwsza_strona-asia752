@@ -24,6 +24,7 @@
     <a class="link" href="/pracownicy/formularz.html">Formularz</a>
     <a class="link" href="/pracownicy/daneDoBazy.php">Dane do bazy</a>
     <a class="link" href="/ksiazki/ksiazki.php">Książki</a>
+    <a class="link" href="/flexbox/index.html">Flexbox</a>
   </div> 
   <div class="strona">
 <?php
