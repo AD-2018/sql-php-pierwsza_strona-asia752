@@ -1,3 +1,10 @@
+.tytul {
+    background-color: orange;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
 .menu {
     background-color: aquamarine;
     width: 100%;
