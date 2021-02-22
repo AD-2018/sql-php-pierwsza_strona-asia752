@@ -112,6 +112,13 @@ echo ("<li>".$sql);
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
+
+        '<td>
+	    
+          <form action="deleteautor.php" method="POST">
+         <input type="text" name="id" value="'.$row['id_autor'].'" hidden>
+          <input type="submit" value="Usuń">
+     </form>
         echo('</tr>');
     }
 
@@ -133,6 +140,15 @@ echo ("<li>".$sql);
       while($row=mysqli_fetch_assoc($result)){
           echo('<tr>');
           echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
+
+          '<td>
+	    
+          <form action="deletetytul.php" method="POST">
+         <input type="text" name="id" value="'.$row['id_tytul'].'" hidden>
+          <input type="submit" value="Usuń">
+     </form>
+          
+          </td>');
           echo('</tr>');
       }
   

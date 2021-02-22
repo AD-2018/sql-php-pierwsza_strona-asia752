@@ -9,6 +9,7 @@
     background-color: aquamarine;
     width: 100%;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .header {
@@ -24,6 +25,7 @@
     padding: 10px;
     text-align: center;
     width: 60%;
+
 }
 
 .menu_item{
