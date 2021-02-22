@@ -119,6 +119,8 @@ echo ("<li>".$sql);
          <input type="text" name="id" value="'.$row['id_autor'].'" hidden>
           <input type="submit" value="Usuń">
      </form>
+     
+     </td>');
         echo('</tr>');
     }
 
