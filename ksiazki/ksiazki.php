@@ -111,7 +111,7 @@ echo ("<li>".$sql);
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
+        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>'.
 
         '<td>
 	    
@@ -119,7 +119,7 @@ echo ("<li>".$sql);
          <input type="text" name="id" value="'.$row['id_autor'].'" hidden>
           <input type="submit" value="Usuń">
      </form>
-     
+
      </td>');
         echo('</tr>');
     }
@@ -141,7 +141,7 @@ echo ("<li>".$sql);
   
       while($row=mysqli_fetch_assoc($result)){
           echo('<tr>');
-          echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
+          echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>'.
 
           '<td>
 	    
