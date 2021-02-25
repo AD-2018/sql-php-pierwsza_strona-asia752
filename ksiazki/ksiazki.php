@@ -107,7 +107,7 @@ echo ("<li>".$sql);
     }
 
     echo('<table border="1">');
-    echo('<th>Id</th><th>Autor</th>');
+    echo('<th>Id</th><th>Autor</th><th>Usuwanie</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -137,7 +137,7 @@ echo ("<li>".$sql);
       }
   
       echo('<table border="1">');
-      echo('<th>Id</th><th>Tytuł</th>');
+      echo('<th>Id</th><th>Tytuł</th><th>Usuwanie</th>');
   
       while($row=mysqli_fetch_assoc($result)){
           echo('<tr>');
