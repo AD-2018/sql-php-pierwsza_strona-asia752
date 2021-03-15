@@ -13,7 +13,7 @@
     <div class="tytul">
       <a class="github" href="https://github.com/AD-2018/sql-php-pierwsza_strona-asia752">Github</a>
       <div class="imie">
-      <h1>Joanna Stanik 3Ti nr 12</h1>
+      <h1>Joanna Stanik 3Ti</h1>
     </div>
   </div>  
   <div class="menu">
